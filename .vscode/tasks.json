@@ -1,0 +1,18 @@
+{
+    "version": "0.1.0"
+    , "runner": "terminal"
+    , "tasks": [
+{
+
+"taskName": "Compile",
+"command": "go run",
+"isShellCommand": true,
+"isBuildCommand": true,
+"showOutput": "always",
+"args": "${relativeFile}",
+}
+
+
+
+    ]
+}
