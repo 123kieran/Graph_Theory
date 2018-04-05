@@ -1,3 +1,5 @@
+//Author: Kieran O'Halloran
+//Adapted from: https://web.microsoftstream.com/video/9d83a3f3-bc4f-4bda-95cc-b21c8e67675e
 package main
 
 import (
@@ -9,7 +11,7 @@ func intopost(infix string) string {
 	var s []rune
 	var pofix []rune
 
-	for _, r := range infix { 
+	for _, r := range infix {
 		switch {
 		case r == '(':
 			s = append(s, r)

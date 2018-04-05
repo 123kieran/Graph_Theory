@@ -1,3 +1,8 @@
+//Author: Kieran O'Halloran
+//Adapted from:
+//https://web.microsoftstream.com/video/68a288f5-4688-4b3a-980e-1fcd5dd2a53b
+//https://web.microsoftstream.com/video/bad665ee-3417-4350-9d31-6db35cf5f80d
+
 package main
 
 import (
