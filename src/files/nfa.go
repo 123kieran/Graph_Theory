@@ -59,6 +59,39 @@ func Poregtonfa(pofix string) *nfa { //return pointer to nfa
 
 			nfaStack = append(nfaStack, &nfa{initial: &initial, accept: &accept}) //push new frag to nfa stack
 
+		case '+':
+			//Pop 1 fragment of nfastack (Kleene star only works on one fragment of the nfa)
+			frag := nfaStack[len(nfaStack)-1]
+
+			//create a normal new state
+			accept := state{}
+
+			//Edge1 needs to be in iintial  state of fragment we popped off and edge2 needs to point at the new accept state
+			initial := state{edge1: frag.initial, edge2: &accept}
+
+			//The fragment edge has to point at the initial state
+			frag.accept.edge1 = &initial
+
+			//Push new fragment to nfastack
+			nfaStack = append(nfaStack, &nfa{initial: frag.initial, accept: &accept})
+
+		case '?':
+			//Pop 1 fragment of nfastack (Kleene star only works on one fragment of the nfa)
+			frag := nfaStack[len(nfaStack)-1]
+
+			initial := state{edge1: frag.initial, edge2: frag.accept}
+
+			//
+			accept := state{edge1: frag.initial, edge2: frag.accept}
+			frag.accept.edge1 = &accept
+			//
+
+			//The fragment edge has to point at the initial state
+			frag.accept.edge1 = &initial
+
+			//Push new fragment to nfastack
+			nfaStack = append(nfaStack, &nfa{initial: &initial, accept: frag.accept})
+
 		default:
 			accept := state{}
 			initial := state{symbol: r, edge1: &accept} //label new accept state with symbol r
