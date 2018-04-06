@@ -1,12 +1,8 @@
 //Author: Kieran O'Halloran
 //Adapted from: https://web.microsoftstream.com/video/9d83a3f3-bc4f-4bda-95cc-b21c8e67675e
-package main
+package files
 
-import (
-	"fmt"
-)
-
-func intopost(infix string) string {
+func Intopost(infix string) string {
 	specials := map[rune]int{'"': 10, '.': 9, '|': 8}
 	var s []rune
 	var pofix []rune
@@ -35,21 +31,11 @@ func intopost(infix string) string {
 
 	return string(pofix)
 }
-func main() {
-	//answer should be ab.c*
-	fmt.Print("Infix:   ", "a.b.c*")
-	fmt.Print("Postfix  ", intopost("a.b.c*"))
 
-	//answer should be abd|.*
-	fmt.Print("Infix:   ", "a.(b|d))*")
-	fmt.Print("Postfix  ", intopost("(a.(b|d))*"))
-
-	//answer should be abd|.c*.
-	fmt.Print("Infix:   ", "a.(b|d).c*")
-	fmt.Print("Postfix: ", intopost("a.(b|d).c*"))
-
-	//answer should be abb.+.c.
-	fmt.Print("Infix    ", "a.(b.b)+.c")
-	fmt.Print("Postfix: ", intopost("a.(b.b)+.c"))
-
+// Remove ending of string
+func TrimEndString(s string) string {
+	if len(s) > 0 {
+		s = s[:len(s)-2]
+	}
+	return s
 }

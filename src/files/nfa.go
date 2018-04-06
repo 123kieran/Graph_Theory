@@ -3,11 +3,7 @@
 //https://web.microsoftstream.com/video/68a288f5-4688-4b3a-980e-1fcd5dd2a53b
 //https://web.microsoftstream.com/video/bad665ee-3417-4350-9d31-6db35cf5f80d
 
-package main
-
-import (
-	"fmt"
-)
+package files
 
 type state struct {
 	//store letter with state. Value is 0
@@ -22,7 +18,7 @@ type nfa struct { //keep track of initial and accept states
 	accept  *state
 }
 
-func poregtonfa(pofix string) *nfa { //return pointer to nfa
+func Poregtonfa(pofix string) *nfa { //return pointer to nfa
 	nfaStack := []*nfa{}
 
 	for _, r := range pofix {
@@ -93,12 +89,12 @@ func addState(l []*state, s *state, a *state) []*state {
 }
 
 //function returning boolean on a regular expression matching a given string
-func postFixMatch(postFix string, str string) bool {
+func PostFixMatch(postFix string, str string) bool {
 	//set returned boolean to false to start
 	matched := false
 
 	//convert postfix regex to an non-determistic finite automata
-	pfixNfa := poregtonfa(postFix)
+	pfixNfa := Poregtonfa(postFix)
 
 	//array of state pointers containing all the current states of nfa
 	current := []*state{}
@@ -131,9 +127,4 @@ func postFixMatch(postFix string, str string) bool {
 
 	//returning whether it's a match or not
 	return matched
-}
-
-func main() {
-
-	fmt.Println(postFixMatch("ab.c*|", "c"))
 }
