@@ -69,7 +69,8 @@ eg. > cd Graph_Theory
 > go run main.go
 ```
 
-##Resources
+## Resources
+
 https://web.microsoftstream.com/video/9d83a3f3-bc4f-4bda-95cc-b21c8e67675e
 https://web.microsoftstream.com/video/68a288f5-4688-4b3a-980e-1fcd5dd2a53b
 https://web.microsoftstream.com/video/bad665ee-3417-4350-9d31-6db35cf5f80d
