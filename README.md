@@ -31,6 +31,21 @@ You are expected to be able to break this project into a number of smaller
 tasks that are easier to solve, and to plug these together after they have been
 completed.
 
+## Testing the Program
+Infix to Postfix:
+
+• a.b.c* -> ab.c*.
+
+• (a.(b|d))* -> abd|.*
+
+• a.(b|d).c* -> abd|.c*.
+
+• a.(b.b)+.c -> abb.+.c.
+
+Postfix to NFA:
+
+•ab.c*| will match cccc
+
 
 ## How to run the program
 
@@ -54,3 +69,7 @@ eg. > cd Graph_Theory
 > go run main.go
 ```
 
+##Resources
+https://web.microsoftstream.com/video/9d83a3f3-bc4f-4bda-95cc-b21c8e67675e
+https://web.microsoftstream.com/video/68a288f5-4688-4b3a-980e-1fcd5dd2a53b
+https://web.microsoftstream.com/video/bad665ee-3417-4350-9d31-6db35cf5f80d
