@@ -18,12 +18,12 @@ func main() {
 	for exit {
 
 		//Initial selection
-		fmt.Print("\nPlease select an option:\n1)Infix Expression to Postfix Expresssion\n2)Postix Regular Expresssion to NFA\n	3)Exit\n")
+		fmt.Print("\n***Please select an option:***\n1)Infix Expression to Postfix Expresssion\n2)Postix Regular Expresssion to NFA\n	3)Exit\n")
 		fmt.Scanln(&option)
 
 		//Enter inifix to postfix
 		if option == 1 {
-			fmt.Print("Please enter the expression to be converted:")
+			fmt.Print("Please enter the Inifix expression to be converted:")
 			//Read in string and use the function created in shunt.go to trim the string
 			reader := bufio.NewReader(os.Stdin)
 			expression, _ := reader.ReadString('\n')
@@ -37,7 +37,7 @@ func main() {
 			//Enter Postfix to NFA
 		} else if option == 2 {
 
-			fmt.Print("Please enter the expression to be converted:")
+			fmt.Print("Please enter the Postfix expression to be converted:")
 			////Read in string and use function created in shunt.go to trim the string
 			reader := bufio.NewReader(os.Stdin)
 			expression, _ := reader.ReadString('\n')
