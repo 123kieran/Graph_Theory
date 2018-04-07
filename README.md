@@ -1,8 +1,13 @@
-Author: Kieran O'Halloran
-Student ID: G00326425
+# Graph Theory Project
+
+## Author: Kieran O'Halloran
+
+## Student ID: G00326425
+
 This is my implementation of a regular expression engine in Go. This is for my 3rd year Graph Theory module in GMIT.
 
-Project Description
+
+## Project Description
 You must write a program in the Go programming language [2] that can
 build a non-deterministic finite automaton (NFA) from a regular expression,
 and can use the NFA to check if the regular expression matches any given
@@ -26,17 +31,26 @@ You are expected to be able to break this project into a number of smaller
 tasks that are easier to solve, and to plug these together after they have been
 completed.
 
-How to Run The Program
-Assumes that Git and Go are installed along with the prerequisites. If not, they can be found from https://golang.org/dl/ and https://git-scm.com/downloads
 
-1. Clone the Repository
+## How to run the program
 
+*Assumes that Git and Go are installed along with the prerequisites.*
+**If not, they can be found from https://golang.org/dl/ and https://git-scm.com/downloads**
+
+**1. Clone the Repository**
+```bash
 > git clone https://github.com/123kieran/Graph_Theory
-2. Change Directory to the Folder
+```
+**2. Change Directory to the Folder**
 
+```bash
 Open the terminal/command line and navigate into the folder 
-eg. > cd Grapg_Theory
-2. Run the program
+eg. > cd Graph_Theory
+```
 
+**2. Run the program**
+
+```bash
 > go run main.go
+```
 
